@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import View from "./Pages/Product/View";
 import Checkout from "./Pages/Product/Checkout";
 import Profile from "./Pages/Profile";
+import Login from "./Pages/Auth/Login";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
           <Route index={true} path="/" element={<Home />} />
           <Route path="/product/:state" element={<View />} />
           <Route path="/product/:state/checkout" element={<Checkout />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile" element={<Login />} />
+          <Route path="/login/redirect" element={<Login />} />
         </Routes>
         {/* <a href="https://saweria.co" className="fixed bottom-3 right-4 bg-yellow-400 px-5 py-2 rounded-full shdadow">
           Dukung kami
