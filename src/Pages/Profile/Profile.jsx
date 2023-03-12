@@ -3,7 +3,7 @@ import React from "react";
 
 function Profile() {
   const user = {
-    name: "zSamsul Arif",
+    name: "Reihannudin",
   };
   return (
     <>
@@ -47,31 +47,39 @@ function Profile() {
       </div>
       <div className="px-4 bg-white pb-5">
           <div className="w-full my-2  py-1 mx-auto">
-              <div className="flex my-3">
-                  <i className="fa-solid fa-shopping-bag my-1 mx-3"></i>
-                  <p>Product</p>
-              </div>
+              <a href={"/user/product"}>
+                  <div className="flex my-3">
+                      <i className="fa-solid fa-shopping-bag my-1 mx-3"></i>
+                      <p>Product</p>
+                  </div>
+              </a>
+              <hr />
+          </div>
+          <div className="w-full my-2  py-1  mx-auto">
+              <a href={"/user/promotion"}>
+                  <div className="flex my-3">
+                      <i className="fa-solid fa-tags my-1 mx-3"></i>
+                      <p>Promotion</p>
+                  </div>
+              </a>
               <hr />
           </div>
           <div className="w-full my-2 py-1 mx-auto">
-              <div className="flex my-3">
-                  <i className="fa-solid fa-ticket my-1 mx-3"></i>
-                  <p>Orders</p>
-              </div>
+              <a href={"/user/status/product"}>
+                  <div className="flex my-3">
+                      <i className="fa-solid fa-ticket my-1 mx-3"></i>
+                      <p>Lifecycle Product</p>
+                  </div>
+              </a>
               <hr />
           </div>
           <div className="w-full my-2  py-1  mx-auto">
-              <div className="flex my-3">
-                  <i className="fa-solid fa-tags my-1 mx-3"></i>
-                  <p>Promotion</p>
-              </div>
-              <hr />
-          </div>
-          <div className="w-full my-2  py-1  mx-auto">
-              <div className="flex my-3" style={{ color: "#da1010"}}>
-                  <i className="fa-solid fa-sign-out my-1 mx-3"></i>
-                  <p>Log out</p>
-              </div>
+              <a href={"/"}>
+                  <div className="flex my-3" style={{ color: "#da1010"}}>
+                      <i className="fa-solid fa-sign-out my-1 mx-3"></i>
+                      <p>Log out</p>
+                  </div>
+              </a>
               <hr />
           </div>
       </div>

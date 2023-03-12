@@ -6,16 +6,28 @@ import View from "./Pages/Product/View";
 import Checkout from "./Pages/Product/Checkout";
 import Profile from "./Pages/Profile/Profile";
 import Login from "./Pages/Auth/Login";
+import {Product} from "./Pages/Dashboard/Product/Product";
+import {MyProductView} from "./Pages/Dashboard/Product/View";
+import {EditProduct} from "./Pages/Dashboard/Product/Edit";
+import {PromotionProduct} from "./Pages/Dashboard/Promotion/Promotion";
+import {UpdatePromotion} from "./Pages/Dashboard/Promotion/Update";
+import {LifecycleProduct} from "./Pages/Dashboard/Lifecycle/Lifecycle";
 
 
 function App() {
   return (
     <div className="App">
-      <div className='app-content bg-gray-50 mx-auto' style={{ maxWidth: '400px', minHeight: '100vh' }}>
+      <div className='app-content bg-white mx-auto' style={{ maxWidth: '400px', minHeight: '100vh' }}>
         <Routes>
           <Route index={true} path="/" element={<Home />} />
           <Route path="/product/:state" element={<View />} />
           <Route path="/product/:state/checkout" element={<Checkout />} />
+          <Route path="/user/product" element={<Product />} />
+          <Route path="/user/product/:state" element={<MyProductView />}  />
+          <Route path="/user/edit/product/:state" element={<EditProduct />}/>
+          <Route path="/user/promotion" element={<PromotionProduct />} />
+          <Route path="/user/update/product/:state" element={<UpdatePromotion />}/>
+          <Route path="/user/status/product" element={<LifecycleProduct />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/login/redirect" element={<Login />} />
         </Routes>

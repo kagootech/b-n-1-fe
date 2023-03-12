@@ -11,6 +11,7 @@ import {RecomendedSliderComponent} from "../Component/Home/Slider/Recomended/Rec
 import {AllSliderComponent} from "../Component/Home/Slider/All/AllSlider.component";
 import {Footer} from "../Component/Home/Footer/Footer.component";
 import {CopywritingComponent} from "../Component/Home/Copywriting/Copywriting.component";
+import {FlashSaleSliderComponent} from "../Component/Home/Slider/Flashsale/FlashSaleSlider.component";
 
 function Home() {
 
@@ -26,8 +27,9 @@ function Home() {
       </div>
       <div>
         <RecomendedSliderComponent />
-        <AllSliderComponent />
+          <FlashSaleSliderComponent />
         <BestSellerSliderComponent />
+          <AllSliderComponent />
       </div>
         <CopywritingComponent />
         <Footer />
