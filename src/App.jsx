@@ -12,6 +12,7 @@ import {EditProduct} from "./Pages/Dashboard/Product/Edit";
 import {PromotionProduct} from "./Pages/Dashboard/Promotion/Promotion";
 import {UpdatePromotion} from "./Pages/Dashboard/Promotion/Update";
 import {LifecycleProduct} from "./Pages/Dashboard/Lifecycle/Lifecycle";
+import {AddNewProduct} from "./Pages/Dashboard/Product/AddNew";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/product/:state" element={<View />} />
           <Route path="/product/:state/checkout" element={<Checkout />} />
           <Route path="/user/product" element={<Product />} />
+          <Route path="/user/new/product" element={<AddNewProduct />} />
           <Route path="/user/product/:state" element={<MyProductView />}  />
           <Route path="/user/edit/product/:state" element={<EditProduct />}/>
           <Route path="/user/promotion" element={<PromotionProduct />} />
