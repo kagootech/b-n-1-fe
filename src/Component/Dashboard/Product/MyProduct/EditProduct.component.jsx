@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 export const EditProductComponent = () =>{
     return(
@@ -13,17 +14,6 @@ export const EditProductComponent = () =>{
                         className="border-b  border-grey-600 w-full outline-none text-mf py-2"
                         placeholder="Tambahkan Nama Product"
                         value="ayam upin-ipin"
-                    />
-                </div>
-                <div className="mb-4">
-                    <label htmlFor="" className="text-black-100">
-                        Price
-                    </label>
-                    <input
-                        type="text"
-                        className="border-b  border-grey-600 w-full outline-none text-mf py-2"
-                        placeholder="Tambahkan Price"
-                        value="0.0"
                     />
                 </div>
                 <div className="mb-4">
@@ -82,16 +72,21 @@ export const EditProductComponent = () =>{
                                        <label htmlFor="default-radio-6"
                                                className="w-full ml-2 text-sm font-medium  rounded dark:text-gray-300">Isi Keju</label>
                                     </div>
+
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <span>Tambahkan varian dari product anda</span>
-                    <input
-                        type="text"
-                        className="border-b my-2 border-grey-600 w-full outline-none text-mf py-2"
-                        placeholder="Tambahkan Varian Baru"
-                    />
+                    <div>
+                        <span>Tambahkan varian dari product anda</span>
+                        <div className="text-right my-4">
+                            <Link to="/user/new/product/variant">
+                                <button className="outline-red-600 border text-red-600 rounded-lg py-2 text-center w-full" style={{ width : "45%"}}>
+                                    Add New Variant
+                                </button>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>
@@ -99,14 +94,19 @@ export const EditProductComponent = () =>{
 }
 
 // <div className="mb-4">
-//     <label htmlFor="" className="text-black">
-//         Tambahkan custom options
+//     <label htmlFor="" className="text-black-100">
+//         Price
 //     </label>
-//     <div className="my-2">
-//         <input
-//             type="text"
-//             className="border-b border-grey-600 w-full outline-none text-mf py-2"
-//             placeholder="Tambahkan Varian Baru"
-//         />
-//     </div>
+//     <input
+//         type="text"
+//         className="border-b  border-grey-600 w-full outline-none text-mf py-2"
+//         placeholder="Tambahkan Price"
+//         value="0.0"
+//     />
 // </div>
+// <span>Tambahkan varian dari product anda</span>
+// <input
+//     type="text"
+//     className="border-b my-2 border-grey-600 w-full outline-none text-mf py-2"
+//     placeholder="Tambahkan Varian Baru"
+// />

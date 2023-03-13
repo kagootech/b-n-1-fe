@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import {Link, useNavigation, useParams} from "react-router-dom";
 import {StoreComponent} from "../../../Component/Product/Store/Store.component";
 import {ProductComponent} from "../../../Component/Product/Product/Product.component";
 import {OtherProductSliderComponent} from "../../../Component/Product/Slider/OtherProduct/OtherProductSlider.component";
@@ -15,16 +15,22 @@ export function MyProductView() {
             "Produk dibuat oleh tangan-tangan yang berkualitas. Dengan tingkat kepuasan 100%",
     };
 
+    const navigate = useNavigation();
+    const goBack = () => {
+        navigate(-1);
+    }
+
+
     return (
         <>
             <div className="bg-white pb-10">
                 <div className="fixed">
-                    <div className="bg-white rounded-full shadow px-3 py-2 ml-4 mt-4">
-                        <Link to="/">
-                            <h6 className="text-lg">
-                                <i className="fa-solid fa-arrow-left"></i>
-                            </h6>
-                        </Link>
+                    <div className="bg-white rounded-full shadow px-3 py-2 ml-4 mt-4" >
+                       <button onClick={goBack}>
+                           <h6 className="text-lg">
+                               <i className="fa-solid fa-arrow-left"></i>
+                           </h6>
+                       </button>
                     </div>
                 </div>
 

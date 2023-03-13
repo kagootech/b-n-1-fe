@@ -1,19 +1,27 @@
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {MyProductComponent} from "../../../Component/Dashboard/Product/MyProduct/MyProduct.component";
 import React from "react";
 import {EditProductComponent} from "../../../Component/Dashboard/Product/MyProduct/EditProduct.component";
 
 export function EditProduct () {
+
+    const navigate = useNavigate();
+    const goBack = () => {
+        navigate(-1);
+    }
+
     return(
         <>
-            <div className="bg-white w-full" style={{ position : "fixed" }}>
-                <div className="px-4 bg-white  pb-2 pt-6 flex items-center mb-3">
-                    <Link to="/">
+            <div className="bg-white" >
+                <div className="bg-white "  style={{ position : "fixed"  , width: "92%" }}>
+                    <div className="px-4 bg-white  pb-4 pt-6 flex items-center mb-3" style={{ borderBottom: "1px solid #ebebeb"}}>
+                        <button onClick={goBack}>
                         <h6 className="text-lg mb-0">
-                            <i className="fa-solid fa-arrow-left"></i>
-                        </h6>
-                    </Link>
-                    <h5 className="font-medium text-xl ml-3">Edit Product</h5>
+                                <i className="fa-solid fa-arrow-left"></i>
+                            </h6>
+                        </button>
+                        <h5 className="font-medium text-xl ml-3">Edit Product</h5>
+                    </div>
                 </div>
             </div>
             <div className="h-100" style={{ paddingTop : "70px" , background : "white", height : "100%"}}>

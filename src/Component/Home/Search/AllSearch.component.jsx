@@ -79,8 +79,8 @@ export const AllSearchComponent = () => {
                                                                     <button className="border bg-red-600 text-white px-6 w-full py-1 text-sm rounded-md mr-1 ">
                                                                         Buy Now
                                                                     </button>
-                                                                    <button className="border mx-1 px-2  py-1 text-sm rounded-md mr-1 ">
-                                                                        <i className="fa-solid fa-heart"></i>
+                                                                    <button className="border  mx-1 px-2  py-1 text-sm rounded-md mr-1 ">
+                                                                        <i className="fa-solid text-red-600 fa-heart"></i>
                                                                     </button>
                                                                 </div>
                                                                 {/*<i className="fa-solid fa-store mr-2"></i>*/}

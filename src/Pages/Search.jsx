@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import React from "react";
 import {SearchComponent} from "../Component/Home/Search/Search.component";
 import {AllSliderComponent} from "../Component/Home/Slider/All/AllSlider.component";
@@ -6,24 +6,32 @@ import {AllSearchComponent} from "../Component/Home/Search/AllSearch.component";
 import {CopywritingComponent} from "../Component/Home/Copywriting/Copywriting.component";
 import {Footer} from "../Component/Home/Footer/Footer.component";
 
-export const Search = () => {
+export const SearchPage = () => {
+
+    const navigate = useNavigate();
+    const goBack = () => {
+        navigate(-1);
+    }
+
     return(
         <>
             <div className="bg-white">
                 <div className="px-4 bg-white w-full pb-3 pt-6 flex items-center mb-3">
-                    <Link to="/">
+                    <button onClick={goBack}>
                         <h6 className="text-lg mb-0">
                             <i className="fa-solid fa-arrow-left"  style={{ fontSize: "23px"}}></i>
                         </h6>
-                    </Link>
+                    </button>
                     <div className="mx-4 w-full">
-                        <div className="shadow-sm rounded-2xl overflow-hidden">
-                            <input
-                                type="text"
-                                placeholder="Cari jualan apa bang?"
-                                className="outline-none  rounded-2xl text-md w-full bg-white py-1.5"
-                            />
-                        </div>
+                        <Link to={"/search/name"}>
+                            <div className="shadow-sm rounded-2xl overflow-hidden">
+                                <input
+                                    type="text"
+                                    placeholder="Cari jualan apa bang?"
+                                    className="outline-none  rounded-2xl text-md w-full bg-white py-1.5"
+                                />
+                            </div>
+                        </Link>
                     </div>
 
                     {/*<h5 className="font-medium text-xl ml-3">Saerch</h5>*/}

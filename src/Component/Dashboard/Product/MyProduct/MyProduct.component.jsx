@@ -45,11 +45,13 @@ export const MyProductComponent = () => {
                                                                 {product.store_name}
                                                             </div>
                                                             <div className="my-2">
+                                                                <Link to={"/user/edit/product/" + product.state} >
                                                                 <div className="text-left">
                                                                     <button className="bg-red-600 px-3 py-1 rounded-full text-white font-light" style={{ fontSize : "13px" , borderRadius : "8px 8px 8px 8px"}}>
                                                                         Edit Product
                                                                     </button>
                                                                 </div>
+                                                                </Link>
                                                             </div>
                                                             {/*<i className="fa-solid fa-store mr-2"></i>*/}
 

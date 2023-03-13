@@ -16,7 +16,7 @@ function Checkout() {
 
   return (
     <>
-      <div className="px-4 bg-white  pb-4 pt-6 flex items-center mb-3">
+      <div className="px-4 bg-white  pb-4 pt-6 flex items-center mb-3" style={{ borderBottom: "1px solid #ebebeb"}}>
         <Link to="/">
           <h6 className="text-lg mb-0">
             <i className="fa-solid fa-arrow-left"></i>

@@ -1,19 +1,25 @@
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import {AllSearchComponent} from "../../Component/Home/Search/AllSearch.component";
 import {CopywritingComponent} from "../../Component/Home/Copywriting/Copywriting.component";
 import {Footer} from "../../Component/Home/Footer/Footer.component";
 import React from "react";
 
 export const ProductAll = () => {
+
+    const navigate = useNavigate();
+    const goBack = () => {
+        navigate(-1);
+    }
+
     return(
         <>
             <div className="bg-white">
-                <div className="px-4 bg-white  pb-3 pt-6 flex items-center mb-3">
-                    <Link to="/">
+                <div className="px-4 bg-white  pb-3 pt-6 flex items-center mb-3"  style={{ borderBottom: "1px solid #ebebeb"}}>
+                    <button onClick={goBack}>
                         <h6 className="text-lg mb-0">
                             <i className="fa-solid fa-arrow-left"  style={{ fontSize: "23px"}}></i>
                         </h6>
-                    </Link>
+                    </button>
                     <div className="mx-4">
                         <div className="shadow-sm rounded-2xl overflow-hidden">
                             <input
@@ -24,9 +30,11 @@ export const ProductAll = () => {
                         </div>
                     </div>
                     <div>
-                        <div >
-                            <i className="fa-regular fa-heart" style={{ fontSize: "23px"}}></i>
-                        </div>
+                        <Link to="/wishlist">
+                            <div className="mx-4 cursor-pointer">
+                                <i className="fa-regular fa-heart" style={{ fontSize: "23px"}}></i>
+                            </div>
+                        </Link>
                     </div>
                     <div className="mx-auto my-1">
                         <Link to="/profile">
@@ -51,7 +59,7 @@ export const ProductAll = () => {
                     </div>
                 </div>
                 <div className="mb-2">
-                    <p style={{ fontSize: "26px"}}>Hasil untuk pencarian</p>
+                    <p style={{ fontSize: "24px"}}>Hasil untuk pencarian</p>
                 </div>
                 <hr/>
                 <div>

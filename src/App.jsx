@@ -13,9 +13,11 @@ import {PromotionProduct} from "./Pages/Dashboard/Promotion/Promotion";
 import {UpdatePromotion} from "./Pages/Dashboard/Promotion/Update";
 import {LifecycleProduct} from "./Pages/Dashboard/Lifecycle/Lifecycle";
 import {AddNewProduct} from "./Pages/Dashboard/Product/AddNew";
-import {Search} from "./Pages/Search";
 import {ProductAll} from "./Pages/Product/All";
 import {AddNewProductComponent} from "./Component/Dashboard/Product/MyProduct/NewProduct.component";
+import {Wishlist} from "./Pages/Dashboard/Wishlist/Wishlist";
+import {SearchPage} from "./Pages/Search";
+import {AddNewVariant} from "./Pages/Dashboard/Product/AddNewVariant";
 
 
 function App() {
@@ -26,16 +28,18 @@ function App() {
           <Route index={true} path="/" element={<Home />} />
           <Route path="/product/:state" element={<View />} />
           <Route path="/product/:state/checkout" element={<Checkout />} />
-          <Route path="/search" element={<Search />} />
+          <Route path="/search" element={<SearchPage />} />
           <Route path="/search/name" element={<ProductAll />} />
           <Route path="/user/product" element={<Product />} />
           <Route path="/user/new/product" element={<AddNewProduct />} />
+          <Route path="/user/new/product/variant" element={<AddNewVariant />} />
           <Route path="/user/product/:state" element={<MyProductView />}  />
           <Route path="/user/add/product/" element={<AddNewProduct />}/>
           <Route path="/user/edit/product/:state" element={<EditProduct />}/>
           <Route path="/user/promotion" element={<PromotionProduct />} />
           <Route path="/user/update/product/:state" element={<UpdatePromotion />}/>
           <Route path="/user/status/product" element={<LifecycleProduct />} />
+          <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/login/redirect" element={<Login />} />
         </Routes>
