@@ -26,9 +26,11 @@ export const Product = () => {
                             Daftar product anda
                         </p>
                     </div>
+                    <Link to={"/user/add/product/"} >
                     <div className="mx-4 my-1">
                         <button className=" py-2 px-3  text-white " style={{ border : "1px solid #eeaeaea" , background : "rgba(229,11,11,0.93)" }}>Add New Product</button>
                     </div>
+                    </Link>
                 </div>
                 <div  style={{ marginTop :"2px"}}>
                     <MyProductComponent />
