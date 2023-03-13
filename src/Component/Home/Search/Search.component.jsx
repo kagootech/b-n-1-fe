@@ -1,7 +1,7 @@
 import React from "react";
 import {NameTagComponent} from "../NameTag/NameTag.component";
 
-export const Search = () => {
+export const SearchComponent = () => {
     return(
         <>
             <div className="-mt-5 px-4">

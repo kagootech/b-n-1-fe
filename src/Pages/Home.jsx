@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import {Navbar} from "../Component/Home/Navbar/Navbar.component";
-import {Search} from "../Component/Home/Search/Search.component";
+import {Search, SearchComponent} from "../Component/Home/Search/Search.component";
 import {NameTagComponent} from "../Component/Home/NameTag/NameTag.component";
 import {Banner} from "../Component/Home/Banner/Banner.component";
 import {CategoryComponent} from "../Component/Home/Category/Category.component";
@@ -20,7 +20,7 @@ function Home() {
       <Navbar />
       <div className="bg-white">
         <div className="pt-7">
-          <Search />
+          <SearchComponent />
         </div>
         <Banner />
         <CategoryComponent />
