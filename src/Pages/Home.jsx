@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React from "react";
+import React, {useEffect} from "react";
 import {Navbar} from "../Component/Home/Navbar/Navbar.component";
 import {Search, SearchComponent} from "../Component/Home/Search/Search.component";
 import {NameTagComponent} from "../Component/Home/NameTag/NameTag.component";
@@ -15,7 +15,13 @@ import {FlashSaleSliderComponent} from "../Component/Home/Slider/Flashsale/Flash
 
 function Home() {
 
-  return (
+    useEffect(() => {
+        setTimeout(() => {
+            <Banner />;
+        }, 1000); // You can adjust the delay time as needed
+    }, []);
+
+    return (
     <>
       <Navbar />
       <div className="bg-white">
