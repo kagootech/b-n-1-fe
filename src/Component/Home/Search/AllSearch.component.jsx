@@ -6,36 +6,42 @@ export const AllSearchComponent = () => {
 
     const products = [
         {
+            id : 1,
             state: "kulpi-shaka",
             name: "Kulpi",
             store_name: "Shaka food",
             price: 10000,
         },
         {
+            id : 2,
             state: "roreng-dita",
             name: "Roti Goreng",
             store_name: "Dita's food",
             price: 5000,
         },
         {
+            id : 3,
             state: "kulpi-shaka",
             name: "Kulpi",
             store_name: "Shaka food",
             price: 10000,
         },
         {
+            id : 4,
             state: "roreng-dita",
             name: "Roti Goreng",
             store_name: "Dita's food",
             price: 5000,
         },
         {
+            id : 5,
             state: "kulpi-shaka",
             name: "Kulpi",
             store_name: "Shaka food",
             price: 10000,
         },
         {
+            id : 6,
             state: "roreng-dita",
             name: "Roti Goreng",
             store_name: "Dita's food",
@@ -53,8 +59,8 @@ export const AllSearchComponent = () => {
                             <div className="grid grid-cols-2 gap-5">
                                 {products.map((product) => {
                                     return (
-                                        <Link to={"/product/" + product.state}>
-                                            <div className="bg-white shadow-sm rounded overflow-hidden">
+                                        <Link to={"/product/" + product.state} key={product.id}>
+                                            <div className="bg-white shadow-sm rounded overflow-hidden" key={product.id}>
                                                 <div
                                                     className="img bg-blue-300"
                                                     style={{height: "140px"}}

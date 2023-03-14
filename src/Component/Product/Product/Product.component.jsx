@@ -10,6 +10,7 @@ const product = {
 
 
 export const ProductComponent = () => {
+
     return(
         <div>
             <div>
@@ -24,7 +25,7 @@ export const ProductComponent = () => {
                             type="button">Varian<svg className="w-4 h-4 ml-2" aria-hidden="true" fill="none"
                                                               stroke="currentColor" viewBox="0 0 24 24"
                                                               xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        <path d="M19 9l-7 7-7-7"></path>
                     </svg></button>
 
                     <div id="dropdownRadioBgHover"
@@ -33,7 +34,9 @@ export const ProductComponent = () => {
                             aria-labelledby="dropdownRadioBgHoverButton">
                             <li>
                                 <div className="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                                    <input id="default-radio-4" type="radio" value="" name="default-radio"
+                                    <input id="default-radio-4" type="radio" value="Isi Coklat" name="default-radio"
+                                           checked=""
+                                           onChange="Isi Coklat"
                                            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
                                     <label htmlFor="default-radio-4"
                                            className="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Isi Coklat</label>
@@ -41,7 +44,9 @@ export const ProductComponent = () => {
                             </li>
                             <li>
                                 <div className="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                                    <input checked id="default-radio-5" type="radio" value="" name="default-radio"
+                                    <input id="default-radio-5" type="radio" value="Isi Strawberry" name="default-radio"
+                                           checked=""
+                                           onChange="Isi Strawberry"
                                            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
                                     <label htmlFor="default-radio-5"
                                            className="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Isi Strawberry</label>
@@ -49,7 +54,9 @@ export const ProductComponent = () => {
                             </li>
                             <li>
                                 <div className="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
-                                    <input id="default-radio-6" type="radio" value="" name="default-radio"
+                                    <input id="default-radio-6" type="radio" value="Isi Keju" name="default-radio"
+                                           checked=""
+                                           onChange="Isi Keju"
                                            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
                                     <label htmlFor="default-radio-6"
                                            className="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300">Isi Keju</label>
@@ -65,14 +72,20 @@ export const ProductComponent = () => {
                 </div>
             </div>
             <div>
+            </div>
+        </div>
+    )
+}
 
-
+/*
+*
+*
                 <button id="dropdownHelperButton" data-dropdown-toggle="dropdownHelper"
                         className="bg-gray-100 hover:bg-gray-200 text-black w-full justify-between  focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                         type="button">Tambahan Topping <svg className="w-4 h-4 ml-2" aria-hidden="true" fill="none"
                                                              stroke="currentColor" viewBox="0 0 24 24"
                                                              xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    <path  d="M19 9l-7 7-7-7"></path>
                 </svg></button>
 
                 <div id="dropdownHelper"
@@ -83,6 +96,8 @@ export const ProductComponent = () => {
                             <div className="flex p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600">
                                 <div className="flex items-center h-5">
                                     <input id="helper-checkbox-1" aria-describedby="helper-checkbox-text-1"
+                                           checked=""
+                                           onChange=""
                                            type="checkbox" value=""
                                            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
                                 </div>
@@ -101,6 +116,8 @@ export const ProductComponent = () => {
                                 <div className="flex items-center h-5">
                                     <input id="helper-checkbox-2" aria-describedby="helper-checkbox-text-2"
                                            type="checkbox" value=""
+                                           checked=""
+                                           onChange=""
                                            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
                                 </div>
                                 <div className="ml-2 text-sm">
@@ -118,6 +135,8 @@ export const ProductComponent = () => {
                                 <div className="flex items-center h-5">
                                     <input id="helper-checkbox-3" aria-describedby="helper-checkbox-text-3"
                                            type="checkbox" value=""
+                                           checked=""
+                                           onChange=""
                                            className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" />
                                 </div>
                                 <div className="ml-2 text-sm">
@@ -132,8 +151,5 @@ export const ProductComponent = () => {
                         </li>
                     </ul>
                 </div>
-
             </div>
-        </div>
-    )
-}
+* */

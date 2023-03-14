@@ -6,6 +6,7 @@ export const PromotionProductComponent = () => {
 
     const products = [
         {
+            id : 1,
             state: "ayam-upin-ipin",
             name: "Ayam Upin-Ipin",
             price: 14000,
@@ -23,7 +24,7 @@ export const PromotionProductComponent = () => {
                             <div className="grid grid-cols-2  gap-5">
                                 {products.map((product) => {
                                     return (
-                                            <div className="bg-white shadow-sm rounded overflow-hidden">
+                                            <div className="bg-white shadow-sm rounded overflow-hidden"key={product.id}>
                                                 <div
                                                     className="img bg-blue-300"
                                                     style={{height: "140px"}}

@@ -10,9 +10,9 @@ export const AddNewProductComponent = () =>{
                     </label>
                     <input
                         type="text"
+                        onChange="ayam upin-ipin"
                         className="border-b  border-grey-600 w-full outline-none text-mf py-2"
                         placeholder="Tambahkan Nama Product"
-                        value="ayam upin-ipin"
                     />
                 </div>
                 <div className="mb-4">
@@ -31,15 +31,16 @@ export const AddNewProductComponent = () =>{
                     </label>
                     <input
                         type="text"
+                        onChange="description"
                         className="border-b border-grey-600 w-full outline-none text-mf py-2"
                         placeholder="Tambahkan Descripsi"
-                        value="description "
                     />
                 </div>
                 <div className="">
                     <span>Tambahkan Nama & Harga varian dari product anda</span>
                     <input
                         type="text"
+                        onChange="description"
                         className="border-b my-2 border-grey-600 w-full outline-none text-mf py-2"
                         placeholder="Tambahkan Varian Baru"
                     />
@@ -50,9 +51,8 @@ export const AddNewProductComponent = () =>{
                     </label>
                     <input
                         type="number"
+                        onChange="0.0"
                         className="border-b  border-grey-600 w-full outline-none text-mf py-2"
-                        placeholder="Tambahkan Price"
-                        value="0.0"
                     />
                 </div>
                 <div className="mb-4">
@@ -63,7 +63,7 @@ export const AddNewProductComponent = () =>{
                         type="text"
                         className="border-b border-grey-600 w-full outline-none text-mf py-2"
                         placeholder="Tambahkan Descripsi"
-                        value="description "
+                        onChange="description"
                     />
                 </div>
 
