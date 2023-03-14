@@ -46,6 +46,10 @@ function Profile() {
                   <p>bangtan.store</p>
               </div>
               <div className="flex my-2">
+                  <i className="fa-solid fa-phone my-1 mx-3"></i>
+                  <p>(+62)87773301182</p>
+              </div>
+              <div className="flex my-2">
                   <i className="fa-solid fa-envelope my-1 mx-3"></i>
                   <p>reedbulls91@gmail.com</p>
               </div>
