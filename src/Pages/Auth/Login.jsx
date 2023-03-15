@@ -19,6 +19,7 @@ function Login() {
       })
       .then((res) => {
         if (res) {
+          console.log('You are logged now')
           localStorage.setItem("token", auth_token);
           navigate('/');
         } else {
