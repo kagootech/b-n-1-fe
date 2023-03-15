@@ -1,19 +1,25 @@
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import React from "react";
 
 function Profile() {
   const user = {
     name: "Reihannudin",
   };
+
+    const navigate = useNavigate();
+    const goBack = () => {
+        navigate(-1);
+    }
+
   return (
     <>
       <div className="bg-white">
-          <div className="px-4 bg-white  pb-4 pt-6 flex items-center mb-3">
-              <Link to="/">
+          <div className="px-4 bg-white  pb-4 pt-6 flex items-center mb-3" style={{ borderBottom: "1px solid #ebebeb"}}>
+              <button onClick={goBack}>
                   <h6 className="text-lg mb-0">
                       <i className="fa-solid fa-arrow-left"></i>
                   </h6>
-              </Link>
+              </button>
               <h5 className="font-medium text-xl ml-3">Profile</h5>
           </div>
           <div></div>
@@ -34,10 +40,14 @@ function Profile() {
             </div>
           </div>
         </div>
-          <div className="gap-4 mx-3 py-4">
+          <div className="gap-4 mx-3 py-3">
+              <div className="flex my-2">
+                  <i className="fa-solid fa-store my-1 mx-3"></i>
+                  <p>bangtan.store</p>
+              </div>
               <div className="flex my-2">
                   <i className="fa-solid fa-phone my-1 mx-3"></i>
-                  <p>+(62)87773301182</p>
+                  <p>(+62)87773301182</p>
               </div>
               <div className="flex my-2">
                   <i className="fa-solid fa-envelope my-1 mx-3"></i>
@@ -46,6 +56,15 @@ function Profile() {
           </div>
       </div>
       <div className="px-4 bg-white pb-5">
+          <div className="w-full my-2 py-1 mx-auto">
+              <a href={"/wishlist"}>
+                  <div className="flex my-3">
+                      <i className="fa-solid fa-heart my-1 mx-3"></i>
+                      <p>Wishlist</p>
+                  </div>
+              </a>
+              <hr />
+          </div>
           <div className="w-full my-2  py-1 mx-auto">
               <a href={"/user/product"}>
                   <div className="flex my-3">

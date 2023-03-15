@@ -16,7 +16,7 @@ function Checkout() {
 
   return (
     <>
-      <div className="px-4 bg-white  pb-4 pt-6 flex items-center mb-3">
+      <div className="px-4 bg-white  pb-4 pt-6 flex items-center mb-3" style={{ borderBottom: "1px solid #ebebeb"}}>
         <Link to="/">
           <h6 className="text-lg mb-0">
             <i className="fa-solid fa-arrow-left"></i>
@@ -25,45 +25,14 @@ function Checkout() {
         <h5 className="font-medium text-xl ml-3">Checkout</h5>
       </div>
       <div
-        className="bg-white py-4 px-5 mt-3"
+        className="bg-white px-5 "
         style={{
           borderTopRightRadius: "27px",
           borderTopLeftRadius: "27px",
         }}
       >
+
         <h5 className="font-bold  text-2xl mt-3">Data diri</h5>
-        <div className="mt-5">
-          <div className="mb-4">
-            <label htmlFor="" className="text-gray-400">
-              Nama Anda
-            </label>
-            <input
-              type="text"
-              className="border-b rounded-2xl border-grey-600 w-full outline-none text-lg py-3"
-              placeholder="Cth: Arip"
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="" className="text-gray-400">
-              Alamat
-            </label>
-            <input
-              type="text"
-              className="border-b  rounded-2xl border-grey-600 w-full outline-none text-lg py-3"
-              placeholder="Isi berdasarkan titik pertemuan."
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="" className="text-gray-400">
-              Catatan (Opsional)
-            </label>
-            <input
-                type="text"
-                className="border-b  rounded-2xl border-grey-600 w-full outline-none text-lg py-3"
-                placeholder="Isi berdasarkan titik pertemuan."
-            />
-          </div>
-        </div>   <h5 className="font-bold  text-2xl mt-3">Data diri</h5>
         <div className="mt-5">
           <div className="mb-4">
             <label htmlFor="" className="text-gray-400">

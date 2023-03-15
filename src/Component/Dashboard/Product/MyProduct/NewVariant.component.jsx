@@ -1,48 +1,18 @@
 import React from "react";
 
-export const AddNewProductComponent = () =>{
+export const AddNewVariantComponent = () =>{
     return(
         <>
             <div className="mt-5 mx-4">
                 <div className="mb-4">
                     <label htmlFor="" className="text-black">
-                        Nama Product
+                        Nama Variant
                     </label>
                     <input
                         type="text"
-                        onChange="ayam upin-ipin"
                         className="border-b  border-grey-600 w-full outline-none text-mf py-2"
                         placeholder="Tambahkan Nama Product"
-                    />
-                </div>
-                <div className="mb-4">
-                    <label htmlFor="" className="text-black">
-                        Product Image
-                    </label>
-                    <input
-                        type="file"
-                        className="border-b border-grey-600 w-full outline-none text-mf py-2"
-                        placeholder="Tambahkan Gambar Product"
-                    />
-                </div>
-                <div className="mb-4">
-                    <label htmlFor="" className="text-black">
-                        Description
-                    </label>
-                    <input
-                        type="text"
-                        onChange="description"
-                        className="border-b border-grey-600 w-full outline-none text-mf py-2"
-                        placeholder="Tambahkan Descripsi"
-                    />
-                </div>
-                <div className="">
-                    <span>Tambahkan Nama & Harga varian dari product anda</span>
-                    <input
-                        type="text"
-                        onChange="description"
-                        className="border-b my-2 border-grey-600 w-full outline-none text-mf py-2"
-                        placeholder="Tambahkan Varian Baru"
+                        value="ayam upin-ipin"
                     />
                 </div>
                 <div className="mb-4">
@@ -51,8 +21,9 @@ export const AddNewProductComponent = () =>{
                     </label>
                     <input
                         type="number"
-                        onChange="0.0"
                         className="border-b  border-grey-600 w-full outline-none text-mf py-2"
+                        placeholder="Tambahkan Price"
+                        value="0.0"
                     />
                 </div>
                 <div className="mb-4">
@@ -63,10 +34,9 @@ export const AddNewProductComponent = () =>{
                         type="text"
                         className="border-b border-grey-600 w-full outline-none text-mf py-2"
                         placeholder="Tambahkan Descripsi"
-                        onChange="description"
+                        value="description "
                     />
                 </div>
-
             </div>
         </>
     )

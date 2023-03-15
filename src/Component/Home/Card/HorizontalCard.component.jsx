@@ -1,18 +1,21 @@
 
 import React from "react";
+import {Link} from "react-router-dom";
 
 export function HorizontalCardComponent() {
     return (
         <>
-            <div className="card bg-white w-[200px] m-2 rounded-lg shadow-lg" style={{ minHeight: "250px" , maxHeight : "250px"}}>
+            <div className="card bg-white w-[200px] m-2 rounded-lg shadow-lg" style={{ minHeight: "240px" , maxHeight : "240px"}}>
+                <Link to={"/product/apakek"}>
                     <div className="top" >
                         <img
-                            className="w-[200px] h-[130px] object-cover "
+                            className="w-[200px] h-[120px] object-cover "
                             src="/products/fs.jpg"
                             alt="img"
                             style={{ borderRadius: "8px 8px 0px 0px"}}
                         />
                     </div>
+                </Link>
                     <div className="bottom flex flex-col justify-center items-start px-3 py-2 bg-">
                         <div className="py-1 w-full">
                             <h6>Ayam Upin-Ipin</h6>
@@ -28,11 +31,13 @@ export function HorizontalCardComponent() {
                                         Mail Food
                                     </div>
                                     <div className="my-2 w-full flex justify-between">
-                                        <div className="text-left">
-                                            <button className="bg-red-600 px-3 py-1 rounded-2xl text-white font-light " style={{ fontSize : "13px"}}>
-                                                Buy Now
-                                            </button>
-                                        </div>
+                                        <Link to={"/product/apakek"}>
+                                            <div className="text-left">
+                                                <button className="bg-red-600 px-3 py-1 rounded-2xl text-white font-light " style={{ fontSize : "13px" , borderRadius: "8px" , border : "1px solid #ebebeb"}}>
+                                                    Buy Now
+                                                </button>
+                                            </div>
+                                        </Link>
                                         <div className="text-right">
                                             <p className="text-red-400" style={{ fontSize : "8px"}}>Berakhir pada</p>
                                             <p className="text-red-600" style={{ fontSize : "10px"}}>12:00/13/03/23</p>

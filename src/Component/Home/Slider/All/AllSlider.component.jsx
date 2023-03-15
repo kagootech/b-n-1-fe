@@ -6,36 +6,42 @@ export const AllSliderComponent = () => {
 
     const products = [
         {
+            id : 1 ,
             state: "kulpi-shaka",
             name: "Kulpi",
             store_name: "Shaka food",
             price: 10000,
         },
         {
+            id : 2 ,
             state: "roreng-dita",
             name: "Roti Goreng",
             store_name: "Dita's food",
             price: 5000,
         },
         {
+            id : 3 ,
             state: "kulpi-shaka",
             name: "Kulpi",
             store_name: "Shaka food",
             price: 10000,
         },
         {
+            id : 4 ,
             state: "roreng-dita",
             name: "Roti Goreng",
             store_name: "Dita's food",
             price: 5000,
         },
         {
+            id : 5 ,
             state: "kulpi-shaka",
             name: "Kulpi",
             store_name: "Shaka food",
             price: 10000,
         },
         {
+            id : 6 ,
             state: "roreng-dita",
             name: "Roti Goreng",
             store_name: "Dita's food",
@@ -59,14 +65,15 @@ export const AllSliderComponent = () => {
                             <div className="grid grid-cols-2 gap-5">
                                 {products.map((product) => {
                                     return (
-                                        <Link to={"/product/" + product.state}>
-                                            <div className="bg-white shadow-sm rounded overflow-hidden">
-                                                <div
-                                                    className="img bg-blue-300"
-                                                    style={{height: "140px"}}
-                                                >
-                                                    <img src="/products/fs.jpg" className="h-full"/>
-                                                </div>
+                                            <div className="bg-white shadow-sm rounded overflow-hidden" key={product.id}>
+                                                <Link to={"/product/" + product.state}>
+                                                    <div
+                                                        className="img bg-blue-300"
+                                                        style={{height: "140px"}}
+                                                    >
+                                                        <img src="/products/fs.jpg" className="h-full"/>
+                                                    </div>
+                                                </Link>
                                                 <div className="px-4 py-2">
                                                     <h6>{product.name}</h6>
                                                     <div className="flex jusfify-between">
@@ -80,26 +87,25 @@ export const AllSliderComponent = () => {
                                                             <div className="category text-xs font-light ">
                                                                 {product.store_name}
                                                             </div>
-                                                            <div className="flex mt-3 mb-1 items-center ">
-                                                                <button className="border px-3 w-full py-1 text-sm rounded-md mr-1 ">
-                                                                    Buy Now
-                                                                </button>
+                                                            <div className="flex py-2 w-full justify-between items-center ">
+                                                                <Link to={"/product/" + product.state}>
+                                                                <div className="text-left ">
+                                                                    <button className="bg-red-600   px-5 py-1 text-white font-light " style={{ fontSize : "13px" , borderRadius: "8px"}}>
+                                                                        Buy Now
+                                                                    </button>
+                                                                </div>
+                                                                </Link>
+                                                                <div className="text-right ">
+                                                                    <button className=" px-2 py-1  text-white font-light " style={{ fontSize : "13px" , borderRadius: "8px" , border : "1px solid #ebebeb"}}>
+                                                                        <i className="fa-regular fa-heart " style={{ color: "#ea1111" , fontSize: "14px"}}></i>
+                                                                    </button>
+                                                                </div>
                                                             </div>
-                                                            {/*<i className="fa-solid fa-store mr-2"></i>*/}
 
-                                                            {/*<h6 className="text-sm text-gray-500">*/}
-                                                            {/*</h6>*/}
                                                         </div>
-                                                        {/* <div className="text-right">
-                          <button className="bg-yellow-400 px-3 rounded-full text-white font-bold text-xl">
-                            +
-                          </button>
-                        </div> */}
-                                                        {/* <i class="fa-regular fa-cart-plus"></i> */}
                                                     </div>
                                                 </div>
                                             </div>
-                                        </Link>
                                     );
                                 })}
                             </div>

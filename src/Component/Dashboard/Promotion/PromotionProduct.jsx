@@ -6,6 +6,7 @@ export const PromotionProductComponent = () => {
 
     const products = [
         {
+            id : 1,
             state: "ayam-upin-ipin",
             name: "Ayam Upin-Ipin",
             price: 14000,
@@ -23,7 +24,7 @@ export const PromotionProductComponent = () => {
                             <div className="grid grid-cols-2  gap-5">
                                 {products.map((product) => {
                                     return (
-                                            <div className="bg-white shadow-sm rounded overflow-hidden">
+                                            <div className="bg-white shadow-sm rounded overflow-hidden"key={product.id}>
                                                 <div
                                                     className="img bg-blue-300"
                                                     style={{height: "140px"}}
@@ -46,7 +47,7 @@ export const PromotionProductComponent = () => {
                                                             <div className="my-2">
                                                                 <Link to={"/user/update/product/" + product.state}>
                                                                     <div className="text-left">
-                                                                        <button className="bg-red-600 px-3 py-1 rounded-2xl text-white font-light " style={{ fontSize : "13px"}}>
+                                                                        <button className="bg-red-600 px-3 py-1 rounded-2xl text-white font-light " style={{ fontSize : "13px" , borderRadius: "8px"}}>
                                                                             Update Promo
                                                                         </button>
                                                                     </div>

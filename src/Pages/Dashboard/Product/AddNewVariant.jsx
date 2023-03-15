@@ -2,8 +2,10 @@ import {Link, useNavigate} from "react-router-dom";
 import {MyProductComponent} from "../../../Component/Dashboard/Product/MyProduct/MyProduct.component";
 import React from "react";
 import {EditProductComponent} from "../../../Component/Dashboard/Product/MyProduct/EditProduct.component";
+import {AddNewProductComponent} from "../../../Component/Dashboard/Product/MyProduct/NewProduct.component";
+import {AddNewVariantComponent} from "../../../Component/Dashboard/Product/MyProduct/NewVariant.component";
 
-export function EditProduct () {
+export function AddNewVariant () {
 
     const navigate = useNavigate();
     const goBack = () => {
@@ -20,12 +22,12 @@ export function EditProduct () {
                                 <i className="fa-solid fa-arrow-left"></i>
                             </h6>
                         </button>
-                        <h5 className="font-medium text-xl ml-3">Edit Product</h5>
+                            <h5 className="font-medium text-xl ml-3">Add New Variant</h5>
                     </div>
                 </div>
             </div>
             <div className="h-100" style={{ paddingTop : "70px" , background : "white", height : "100%"}}>
-                <EditProductComponent />
+                <AddNewVariantComponent />
             </div>
             <div
                 className="fixed bottom-0 left-0 w-full"

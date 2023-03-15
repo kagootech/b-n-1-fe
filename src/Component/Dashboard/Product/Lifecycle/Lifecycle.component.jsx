@@ -5,18 +5,21 @@ export const LifecycleProductComponent = () => {
 
     const products = [
         {
+            id : 1,
             state: "ayam-upin-ipin",
             name: "Ayam Upin-Ipin",
             price: 14000,
             store_name: "Mail Food",
         },
         {
+            id : 2,
             state: "ayam-upin-ipin",
             name: "Ayam Upin-Ipin",
             price: 14000,
             store_name: "Mail Food",
         },
         {
+            id : 3,
             state: "ayam-upin-ipin",
             name: "Ayam Upin-Ipin",
             price: 14000,
@@ -34,7 +37,7 @@ export const LifecycleProductComponent = () => {
                             <div className="block gap-5">
                                 {products.map((product) => {
                                     return (
-                                        <div className="bg-white shadow-sm rounded overflow-hidden">
+                                        <div className="bg-white shadow-sm rounded overflow-hidden" key={product.id}>
                                             <div className="flex">
                                                 <div
                                                     className="img bg-blue-300"
