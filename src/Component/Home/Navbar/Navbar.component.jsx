@@ -27,7 +27,7 @@ export const Navbar = ({ logged }) => {
                   "Your Name"
                 ) : (
                   <>
-                    <a href="http://localhost:8000/login">Login</a>
+                    <a href="http://auth.sellone.shop/login">Login</a>
                   </>
                 )}
               </div>

@@ -47,8 +47,8 @@ function GuestRoutes({ setLogged }) {
   return (
     <>
       <Routes>
-        <Route path="/login" element={<Login setLogged={setLogged} />} />
-        <Route path="/login/redirect" element={<Login />} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/login/redirect" element={<Login setLogged={setLogged} />} />
       </Routes>
     </>
   );
@@ -61,7 +61,7 @@ function App() {
     if (logged) {
       alert("Your are logged now!");
     }
-  }, [localStorage.token]);
+  }, [logged]);
 
   return (
     <div className="App mx-3">
@@ -72,6 +72,7 @@ function App() {
         <Routes>
           <Route index={true} path="/" element={<Home logged={logged} />} />
           <Route path="/product/:state" element={<View />} />
+          <Route path="/search" element={<SearchPage />} />
         </Routes>
         {logged ? <AuthRoutes /> : <GuestRoutes setLogged={setLogged} />}
         {/* <a href="https://saweria.co" className="fixed bottom-3 right-4 bg-yellow-400 px-5 py-2 rounded-full shdadow">
